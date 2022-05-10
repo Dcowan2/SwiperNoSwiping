@@ -1,0 +1,84 @@
+<!--Landing modified page from bootstrap: https://mdbootstrap.com/docs/standard/extended/login/-->
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="Home.css" rel="stylesheet" media="all">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+  //form validation: 
+  (function(){
+    'use strict';
+    window.addEventListener('load', function(){
+      var forms = document.getElementsByClassName('needs-validation');
+      var validation = Array.prototype.filter.call(forms, function(form){
+        if(form.checkValidity()=== false){
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+  console.log(document.getElementById('form3Example3').value)
+
+  //checking if usernames are the same 
+  (function UsernameValidation(){
+    if(document.getElementById('form3Example3').value != 'test'){
+      window.alert("Username must be longer than 3 characters"); 
+      return false; 
+    } else{
+      return true; 
+    }
+  });
+</script>
+    </head>
+    <body>
+      <section class="vh-100">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <!--Adding our logo-->
+              <img src="Puppy Swipe Logo V1.1.1.png"> 
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form action="file:///Users/maliyabaxter/COSC-484/CreateAccount/Create.html"  class="needs-validation" nonvalidate> <!--form validation-->
+                <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                  <p class="lead fw-normal mb-0 me-3"><b>Sign in</b></p>
+                </div>
+                <!-- Username input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="form3Example3" class="form-control form-control-lg"
+                    placeholder="Username" required>
+                  <label class="form-label" for="form3Example3">Username</label>
+                </div>
+      
+                <!-- Password input -->
+                <div class="form-outline mb-3">
+                  <input type="password" id="form3Example4" class="form-control form-control-lg"
+                    placeholder="Enter password" required>
+                </div>
+      
+                <div class="d-flex justify-content-between align-items-center">
+                  <!-- Checkbox -->
+                  <div class="form-check mb-0">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                    <label class="form-check-label" for="form2Example3">
+                      Remember me
+                    </label>
+                  </div>
+                  <a href="#!" class="text-body">Forgot password?</a>
+                </div>
+                <!-- Login Button -->
+                <div class="text-center text-lg-start mt-4 pt-2">
+                <input type="submit" class="btn btn-primary" value="Login" onmouseover="return UsernameValidation()">
+                <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="file:///Users/maliyabaxter/COSC-484/CreateAccount/Create.html" class="link-danger">Register</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div> <!--Original copyright section deleted-->
+          <!-- Right -->
+        </div>
+      </section>
+    </body>
+</html>
