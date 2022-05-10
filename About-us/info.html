@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Us Section</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+	<link rel="stylesheet" type="text/css" href="styel.css">
+</head>	
+<body>
+	<div class="section">
+		<div class="container">
+			<div class="content-section">
+				
+                <div class="title">
+					<h1>About Us</h1>
+				</div>
+
+				<div class="content">
+					<h3>Theres no way you love dogs as much as us! We made a website for it</h3>
+					<p>We are a team of young and ambtious dog lovers who just want to meet other dog lovers!<span id="dots">...</span></p>
+					
+                    <div id="more">
+                        <p>
+                            That is why we created PuppySwipe, a matchmaking platform to find your doggy the perfect
+                            playmate!
+                        </p>
+                        <h4>
+                            Owners who create an account for their dog on Puppy Swipe will be able to:
+                        </h4>
+                        <ol>
+                            <li>Create Accounts for their dogs</li>
+                            <li>Match/Swipe on other potential doggy playmates</li>
+                            <li>Message and Communicate with your matches</li>
+                        </ol>   
+                    </div>
+
+                    <div id="team">
+                        <h3>Our Team</h3>
+                        <p>Below you will find the dog loving individuals who created Puppy Swipe: </p>
+                    </div>
+
+                    <div class="button">
+						<button onclick="myFunction()" id="bttn">Read more</button>
+					</div>
+				</div>
+
+				<!-- <div class="social">
+					<a href=""><i class="fab fa-facebook-f"></i></a>
+					<a href=""><i class="fab fa-twitter"></i></a>
+					<a href=""><i class="fab fa-instagram"></i></a>
+                </div> -->
+			</div>
+
+			<div class="image-section">
+				<img src="./doggyfun.jpeg">
+			</div>
+		</div>
+	</div>
+    <script>
+        function myFunction(){
+            var dots=document.getElementById("dots");
+            var more=document.getElementById("more");
+            var team=document.getElementById("team");
+            var bttntxt=document.getElementById("bttn");
+        
+        if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        bttntxt.innerHTML = "Read more"; 
+        more.style.display = "none";
+        team.style.display="none";
+        }else {
+        dots.style.display = "none";
+        bttntxt.innerHTML = "Read less"; 
+        more.style.display = "block";
+        team.style.display =" block";
+        }
+    
+        }
+    </script>
+	
+</body>
+</html>

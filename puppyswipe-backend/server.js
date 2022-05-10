@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
   res.status(200).send("working");
 });
 
-app.post("/tinder/cards", (req, res) => {
+app.post("/puppy/cards", (req, res) => {
   const Card = req.body;
 
   Cards.create(Card, (err, data) => {
@@ -35,7 +35,7 @@ app.post("/tinder/cards", (req, res) => {
     }
   });
 });
-app.get("/tinder/cards", (req, res) => {
+app.get("/puppy/cards", (req, res) => {
   Cards.find((err, data) => {
     if (err) {
       res.status(500).send(err);

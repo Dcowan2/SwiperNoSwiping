@@ -8,12 +8,12 @@ function PuppyCards() {
 
   useEffect(() => {
     async function fetchData() {
-      const req = await axios.get("/tinder/cards");
+      const req = await axios.get("/puppy/cards");
       setDog(req.data);
     }
     fetchData();
   }, []);
-
+  console.log(dog)
   const swiped = (direction, nameToDelete) => {
   };
   const outOfFrame = (name) => {
